@@ -136,11 +136,11 @@ const Homepage = () => {
         <h2 className="text-3xl font-bold text-center text-amber-400">
           Skills
         </h2>
-        <div className="grid lg:grid-cols-2 md:grid-cols-2 mt-20 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-neutral-900 p-6 rounded-xl shadow hover:shadow-lg hover:bg-neutral-950 transition w-64"
+              className="bg-neutral-900 p-6 rounded-xl shadow hover:shadow-lg hover:bg-neutral-950 transition w-full max-w-xs mx-auto"
             >
               <h3 className="text-xl font-semibold mb-4 text-amber-400">
                 {skill.category}
@@ -176,14 +176,14 @@ const Homepage = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover rounded-t-xl transition duration-300 hover:opacity-90"
+                className="w-full h-38 object-cover rounded-t-xl transition duration-300 hover:opacity-90"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-amber-400">
                   {project.title}
                 </h3>
                 <p className="mt-2 text-white">{project.description}</p>
-                <h6 className="font-bold">Click to view</h6>
+                <h6>Click to view</h6>
               </div>
             </a>
           ))}
