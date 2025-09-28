@@ -183,6 +183,7 @@ const Homepage = () => {
                   {project.title}
                 </h3>
                 <p className="mt-2 text-white">{project.description}</p>
+                <h6 className="font-bold">Click to view</h6>
               </div>
             </a>
           ))}
