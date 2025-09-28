@@ -3,6 +3,7 @@ import Navbar from "../../Components/Navbar";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const skills = [
   {
@@ -15,8 +16,6 @@ const skills = [
       "Responsive Designs",
     ],
   },
-  // { category: "Backend", items: ["Node.js", "Express", "Django"] },
-  // { category: "Database", items: ["MongoDB", "PostgreSQL"] },
   { category: "Tools", items: ["Git", "Figma", "Postman", "VsCode"] },
 ];
 
@@ -46,29 +45,37 @@ const projects = [
     title: "InvoiceU",
     description: "An invoice generator website.",
     link: "http://invoice-u.vercel.app",
-    // github: "#",
-    image: "/src/assets/invoice.png",
+    image: "/assets/invoice.png",
   },
   {
     title: "NephlySoul",
     description: "A Social Companionship Web Application.",
     link: "https://nephly-soul.vercel.app/",
-    // github: "#",
-    image: "/src/assets/nephly.png",
+    image: "/assets/nephly.png",
   },
   {
     title: "44saturnclothings",
     description: "A cothing e-commerce website.",
     link: "https://app.44saturnclothing.com/",
-    image: "/src/assets/cloth.png",
+    image: "  /assets/cloth.png",
   },
 ];
+
+const sectionAnim = {
+  initial: { opacity: 0, scale: 0.95, y: 40 },
+  whileInView: { opacity: 1, scale: 1, y: 0 },
+  viewport: { once: false, amount: 0.3 },
+  transition: { duration: 0.7, ease: "easeOut" },
+};
 
 const Homepage = () => {
   return (
     <div>
       <Navbar />
-      <section className="flex flex-col items-center justify-center text-center py-50 bg-black">
+      <motion.section
+        {...sectionAnim}
+        className="flex flex-col items-center justify-center text-center py-50 bg-black"
+      >
         <div>
           <h2 className="text-4xl md:text-6xl font-bold text-white">
             Hi, I’m <span className="text-amber-400">GBEMLIGHT</span> 👋
@@ -92,9 +99,13 @@ const Homepage = () => {
             View Projects
           </a>
         </div>
-      </section>
+      </motion.section>
 
-      <section id="about" className="px-10 py-20 bg-neutral-950">
+      <motion.section
+        id="about"
+        {...sectionAnim}
+        className="px-10 py-20 bg-neutral-950"
+      >
         <h2 className="text-3xl font-bold text-center text-amber-400">
           About Me
         </h2>
@@ -115,9 +126,13 @@ const Homepage = () => {
           excellence to every project I work on, turning ideas into impactful
           digital solutions.
         </p>
-      </section>
+      </motion.section>
 
-      <section id="skills" className="px-10 py-20 bg-black">
+      <motion.section
+        id="skills"
+        {...sectionAnim}
+        className="px-10 py-20 bg-black"
+      >
         <h2 className="text-3xl font-bold text-center text-amber-400">
           Skills
         </h2>
@@ -138,9 +153,13 @@ const Homepage = () => {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
-      <section id="projects" className="px-10 py-20 bg-neutral-900">
+      <motion.section
+        id="projects"
+        {...sectionAnim}
+        className="px-10 py-20 bg-neutral-900"
+      >
         <h2 className="text-3xl font-bold text-center text-amber-400">
           Projects
         </h2>
@@ -154,14 +173,11 @@ const Homepage = () => {
               className="bg-neutral-800 rounded-xl shadow hover:shadow-lg overflow-hidden block transform transition duration-300 hover:scale-105"
               style={{ textDecoration: "none", color: "inherit" }}
             >
-        
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover rounded-t-xl transition duration-300 hover:opacity-90"
               />
-
-          
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-amber-400">
                   {project.title}
@@ -171,9 +187,13 @@ const Homepage = () => {
             </a>
           ))}
         </div>
-      </section>
+      </motion.section>
 
-      <section id="experience" className="px-10 py-20 bg-black">
+      <motion.section
+        id="experience"
+        {...sectionAnim}
+        className="px-10 py-20 bg-black"
+      >
         <h2 className="text-3xl font-bold text-center text-amber-400">
           Experience
         </h2>
@@ -188,14 +208,16 @@ const Homepage = () => {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
-      <footer id="contact" className="px-10 py-28 bg-neutral-900 text-white">
+      <motion.footer
+        id="contact"
+        {...sectionAnim}
+        className="px-10 py-28 bg-neutral-900 text-white"
+      >
         <h2 className="text-3xl font-bold text-center text-amber-400">
           Contact
         </h2>
-
-      
         <footer className=" text-gray-300 mt-20 text-center">
           <h3 className="text-xl font-semibold text-white">
             Feel free to reach out 🚀
@@ -204,7 +226,6 @@ const Homepage = () => {
             I’m always open to discussing new ideas, opportunities, or
             collaborations. Let’s create something amazing together!
           </p>
-
           <div className="mt-6 space-y-2 text-sm flex flex-col items-center">
             <div className="mt-6 flex flex-row gap-6 justify-center items-center">
               <a
@@ -231,7 +252,7 @@ const Homepage = () => {
             </div>
           </div>
         </footer>
-      </footer>
+      </motion.footer>
       <div className=" border-slate-700 py-8 text-xs text-white text-center bg-black">
         © {new Date().getFullYear()} OLUWADAMILARE. All Rights Reserved.
       </div>
