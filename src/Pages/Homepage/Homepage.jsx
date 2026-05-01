@@ -8,15 +8,12 @@ import { motion } from "framer-motion";
 const skills = [
   {
     category: "Frontend",
-    items: [
-      "React",
-      "Next.js",
-      "TailwindCSS",
-      "Typescript",
-      "Responsive Designs",
-    ],
+    items: ["React", "Next.js", "TypeScript", "TailwindCSS", "Responsive UI"],
   },
-  { category: "Tools", items: ["Git", "Figma", "Postman", "VsCode"] },
+  {
+    category: "Tools & Workflow",
+    items: ["Git", "GitHub", "Figma", "Postman", "Agile"],
+  },
 ];
 
 const experiences = [
@@ -24,130 +21,132 @@ const experiences = [
     year: "2024 – Present",
     role: "Software Engineer",
     company: "Zeus Company",
-    description: "Building scalable applications with React.",
+    description:
+      "Built scalable frontend systems using React and Next.js with focus on performance, reusable components, and maintainable architecture.",
   },
   {
-    year: "2023 - 2024",
+    year: "2023 – 2024",
     role: "Frontend Intern",
     company: "Grazac Technology",
-    description: "Worked on UI/UX implementations and component development.",
+    description:
+      "Translated UI/UX designs into responsive interfaces and collaborated in Agile teams to ship production-ready features.",
   },
   {
     year: "2022",
     role: "Frontend Developer",
     company: "Enoverlab Company",
-    description: "Implementation of responsive designs and integration of APIs",
+    description:
+      "Developed responsive web pages and integrated APIs to improve application functionality and user experience.",
   },
 ];
 
 const projects = [
   {
     title: "InvoiceU",
-    description: "An invoice generator website.",
+    description:
+      "Invoice management system for creating, tracking and managing invoices efficiently.",
     link: "http://invoice-u.vercel.app",
     image: "/assets/invoice.png",
   },
   {
     title: "NephlySoul",
-    description: "A Social Companionship Web Application.",
+    description:
+      "Social companionship platform with posts, messaging, and user interaction features.",
     link: "https://nephly-soul.vercel.app/",
     image: "/assets/nephly.png",
   },
   {
-    title: "44saturnclothings",
-    description: "A cothing e-commerce website.",
+    title: "44Saturn Clothing",
+    description:
+      "E-commerce platform with product listing and checkout experience.",
     link: "https://app.44saturnclothing.com/",
-    image: "  /assets/cloth.png",
+    image: "/assets/cloth.png",
   },
 ];
 
 const sectionAnim = {
-  initial: { opacity: 0, scale: 0.95, y: 40 },
-  whileInView: { opacity: 1, scale: 1, y: 0 },
-  viewport: { once: false, amount: 0.3 },
-  transition: { duration: 0.7, ease: "easeOut" },
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.3 },
+  transition: { duration: 0.6, ease: "easeOut" },
 };
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="bg-black text-white">
       <Navbar />
+
+      {/* HERO SECTION */}
       <motion.section
         {...sectionAnim}
-        className="flex flex-col items-center justify-center text-center py-50 bg-black"
+        className="min-h-screen flex flex-col items-center justify-center text-center px-6"
       >
-        <div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white">
-            Hi, I’m <span className="text-amber-400">GBEMLIGHT</span> 👋
-          </h2>
-          <p className="mt-4 text-lg text-gray-300">
-            I build scalable web applications with React, Next.js, and
-            Typescript.
-          </p>
-        </div>
+        <h1 className="text-4xl md:text-6xl font-bold">
+          I build{" "}
+          <span className="text-amber-400">high-performance</span> web apps
+        </h1>
+
+        <p className="mt-4 text-gray-300 max-w-2xl">
+          Frontend Engineer specializing in React, Next.js, and TypeScript —
+          focused on building scalable, fast, and production-ready applications
+          with clean architecture and strong UX.
+        </p>
+
         <div className="mt-6 flex gap-4">
           <a
             href="#contact"
-            className=" text-white bg-amber-400 hover:bg-amber-400 px-6 py-3 rounded-[50px] font-semibold"
+            className="bg-amber-400 text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
           >
             Hire Me
           </a>
           <a
             href="#projects"
-            className="border border-amber-400 px-6 py-3 rounded-[50px] font-semibold hover:bg-amber-400 text-amber-400 hover:text-white"
+            className="border border-amber-400 text-amber-400 px-6 py-3 rounded-full hover:bg-amber-400 hover:text-black transition"
           >
-            View Projects
+            View Work
           </a>
         </div>
       </motion.section>
 
+      {/* ABOUT */}
       <motion.section
         id="about"
         {...sectionAnim}
-        className="px-10 py-20 bg-neutral-950"
+        className="py-20 px-6 bg-neutral-950"
       >
         <h2 className="text-3xl font-bold text-center text-amber-400">
           About Me
         </h2>
-        <p className="mt-6 max-w-3xl text-[18px] mx-auto text-center text-gray-300">
-          I am a passionate software developer dedicated to building scalable,
-          high-performance web applications that solve real-world problems. I
-          specialize in modern web technologies such as React, Next.js and
-          TypeScript, and I focus on writing clean, maintainable code while
-          delivering seamless and intuitive user experiences. I thrive in
-          collaborative and fast-paced environments, leveraging strong
-          problem-solving, creativity, and critical-thinking skills to tackle
-          complex challenges efficiently. I enjoy exploring emerging
-          technologies, contributing to open-source projects, and mentoring
-          aspiring developers, constantly seeking opportunities to grow and
-          refine my craft. My goal is to create software that not only meets
-          functional requirements but also adds meaningful value to users and
-          businesses alike. I bring dedication, curiosity, and a commitment to
-          excellence to every project I work on, turning ideas into impactful
-          digital solutions.
+
+        <p className="mt-6 max-w-3xl mx-auto text-center text-gray-300 leading-relaxed">
+          I am a Frontend Developer focused on building scalable and
+          performance-driven web applications. I specialize in React, Next.js,
+          and TypeScript, with strong attention to UI consistency, usability,
+          and maintainability. I enjoy solving real-world problems through code
+          and continuously improving user experience through clean and efficient
+          engineering.
         </p>
       </motion.section>
 
+      {/* SKILLS */}
       <motion.section
         id="skills"
         {...sectionAnim}
-        className="px-10 py-20 bg-black"
+        className="py-20 px-6 bg-black"
       >
         <h2 className="text-3xl font-bold text-center text-amber-400">
           Skills
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-neutral-900 p-6 rounded-xl shadow hover:shadow-lg hover:bg-neutral-950 transition w-full max-w-xs mx-auto"
-            >
-              <h3 className="text-xl font-semibold mb-4 text-amber-400">
+
+        <div className="grid md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
+          {skills.map((skill, i) => (
+            <div key={i} className="bg-neutral-900 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold text-amber-400 mb-3">
                 {skill.category}
               </h3>
-              <ul className="space-y-2 text-gray-300">
-                {skill.items.map((item, i) => (
-                  <li key={i}>• {item}</li>
+              <ul className="text-gray-300 space-y-2">
+                {skill.items.map((item, j) => (
+                  <li key={j}>• {item}</li>
                 ))}
               </ul>
             </div>
@@ -155,108 +154,93 @@ const Homepage = () => {
         </div>
       </motion.section>
 
+      {/* EXPERIENCE */}
+      <motion.section
+        id="experience"
+        {...sectionAnim}
+        className="py-20 px-6 bg-neutral-950"
+      >
+        <h2 className="text-3xl font-bold text-center text-amber-400">
+          Experience
+        </h2>
+
+        <div className="mt-10 space-y-6 max-w-3xl mx-auto">
+          {experiences.map((exp, i) => (
+            <div key={i} className="bg-neutral-900 p-6 rounded-xl">
+              <h3 className="text-lg font-semibold">
+                {exp.role} — {exp.company}
+              </h3>
+              <p className="text-amber-400 text-sm">{exp.year}</p>
+              <p className="text-gray-300 mt-2">{exp.description}</p>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* PROJECTS */}
       <motion.section
         id="projects"
         {...sectionAnim}
-        className="px-10 py-20 bg-neutral-900"
+        className="py-20 px-6 bg-black"
       >
         <h2 className="text-3xl font-bold text-center text-amber-400">
           Projects
         </h2>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-          {projects.map((project, index) => (
+          {projects.map((project, i) => (
             <a
-              key={index}
+              key={i}
               href={project.link}
               target="_blank"
-              rel="noopener noreferrer"
-              className="bg-neutral-800 rounded-xl shadow hover:shadow-lg overflow-hidden block transform transition duration-300 hover:scale-105"
-              style={{ textDecoration: "none", color: "inherit" }}
+              rel="noreferrer"
+              className="bg-neutral-900 rounded-xl overflow-hidden hover:scale-105 transition block"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-38 object-cover rounded-t-xl transition duration-300 hover:opacity-90"
+                className="w-full h-40 object-cover"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-amber-400">
+              <div className="p-5">
+                <h3 className="text-xl text-amber-400 font-semibold">
                   {project.title}
                 </h3>
-                <p className="mt-2 text-white">{project.description}</p>
-                <h6>Click to view</h6>
+                <p className="text-gray-300 mt-2">{project.description}</p>
               </div>
             </a>
           ))}
         </div>
       </motion.section>
 
+      {/* CONTACT */}
       <motion.section
-        id="experience"
+        id="contact"
         {...sectionAnim}
-        className="px-10 py-20 bg-black"
+        className="py-24 px-6 bg-neutral-950 text-center"
       >
-        <h2 className="text-3xl font-bold text-center text-amber-400">
-          Experience
-        </h2>
-        <div className="mt-10 space-y-8">
-          {experiences.map((exp, index) => (
-            <div key={index} className="bg-neutral-800 p-6 rounded-xl shadow">
-              <h3 className="text-xl font-semibold text-white">
-                {exp.role} @ {exp.company}
-              </h3>
-              <p className=" text-amber-400">{exp.year}</p>
-              <p className="mt-2 text-white">{exp.description}</p>
-            </div>
-          ))}
+        <h2 className="text-3xl font-bold text-amber-400">Let’s Work</h2>
+
+        <p className="mt-4 text-gray-300 max-w-xl mx-auto">
+          I’m open to internships, remote roles, Contracts and freelance opportunities.
+          Let’s build something impactful.
+        </p>
+
+        <div className="mt-8 flex justify-center gap-6">
+          <a href="mailto:adeyanjusunday114@gmail.com">
+            <MdOutlineMailOutline className="text-4xl hover:text-amber-400" />
+          </a>
+          <a href="https://wa.me/2348132849122">
+            <FaWhatsapp className="text-4xl hover:text-amber-400" />
+          </a>
+          <a href="https://github.com/">
+            <IoLogoGithub className="text-4xl hover:text-amber-400" />
+          </a>
         </div>
       </motion.section>
 
-      <motion.footer
-        id="contact"
-        {...sectionAnim}
-        className="px-10 py-28 bg-neutral-900 text-white"
-      >
-        <h2 className="text-3xl font-bold text-center text-amber-400">
-          Contact
-        </h2>
-        <footer className=" text-gray-300 mt-20 text-center">
-          <h3 className="text-xl font-semibold text-white">
-            Feel free to reach out 🚀
-          </h3>
-          <p className="mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
-            I’m always open to discussing new ideas, opportunities, or
-            collaborations. Let’s create something amazing together!
-          </p>
-          <div className="mt-6 space-y-2 text-sm flex flex-col items-center">
-            <div className="mt-6 flex flex-row gap-6 justify-center items-center">
-              <a
-                href="mailto:adeyanjusunday114@gmail.com"
-                className="hover:text-amber-400 transition"
-              >
-                <MdOutlineMailOutline className="h-[50px] w-[50px]" />
-              </a>
-              <a
-                href="https://wa.me/2348132849122"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-amber-400 transition"
-              >
-                <FaWhatsapp className="h-[50px] w-[50px]" />
-              </a>
-              <a
-                href="https://github.com/Gbemlight"
-                target="_blank"
-                className="hover:text-amber-400 transition"
-              >
-                <IoLogoGithub className="h-[50px] w-[50px]" />
-              </a>
-            </div>
-          </div>
-        </footer>
-      </motion.footer>
-      <div className=" border-slate-700 py-8 text-xs text-white text-center bg-black">
-        © {new Date().getFullYear()} OLUWADAMILARE. All Rights Reserved.
-      </div>
+      <footer className="py-6 text-center text-gray-500 text-sm">
+        © {new Date().getFullYear()} Oluwadamilare Adeyanju. Built with React.
+      </footer>
     </div>
   );
 };
