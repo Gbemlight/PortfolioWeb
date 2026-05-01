@@ -79,8 +79,19 @@ const Homepage = () => {
       {/* HERO SECTION */}
       <motion.section
         {...sectionAnim}
-        className="min-h-screen flex flex-col items-center justify-center text-center px-6"
+        className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20"
       >
+        <motion.img
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          src="/assets/Gbemlight.png" 
+          alt="Oluwadamilare Adeyanju"
+          className="w-48 h-48 md:w-60 md:h-60 rounded-full border-4 border-amber-400 object-cover mb-8 shadow-2xl shadow-amber-400/40 ring-8 ring-amber-400/10 transition-shadow"
+        />
+        <h2 className="text-amber-400 text-lg md:text-xl font-medium mb-2">
+          Hi, I'm Oluwadamilare Adeyanju
+        </h2>
+
         <h1 className="text-4xl md:text-6xl font-bold">
           I build{" "}
           <span className="text-amber-400">high-performance</span> web apps
