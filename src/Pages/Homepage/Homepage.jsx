@@ -18,7 +18,7 @@ const skills = [
 
 const experiences = [
   {
-    year: "2024 – Present",
+    year: "2024 – 2025",
     role: "Software Engineer",
     company: "Zeus Company",
     description:
