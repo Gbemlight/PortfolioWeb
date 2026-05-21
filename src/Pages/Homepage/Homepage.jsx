@@ -5,6 +5,13 @@ import { FaWhatsapp } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { motion } from "framer-motion";
 
+// Example of importing images if they are in src/assets
+// import thriftDeskImage from "../../assets/new.jpeg";
+// import invoiceImage from "../../assets/invoice.png";
+// import nephlyImage from "../../assets/nephly.png";
+// import scentiqueImage from "../../assets/perf.jpeg";
+// import shuttleImage from "../../assets/shuttle.png";
+
 const skills = [
   {
     category: "Frontend",
@@ -42,26 +49,47 @@ const experiences = [
 
 const projects = [
   {
+    title: "ThriftDesk",
+    description:
+      "A modern savings operations platform that helps admin teams manage members, transactions, collectors, and reports from one unified dashboard.", // Consider making this description shorter for better display on cards
+    link: "https://www.thriftdesk.com.ng/",
+    image: "/assets/new.jpeg", // If imported: image: thriftDeskImage,
+  },
+  {
     title: "InvoiceU",
     description:
       "Invoice management system for creating, tracking and managing invoices efficiently.",
     link: "http://invoice-u.vercel.app",
-    image: "/assets/invoice.png",
+    image: "/assets/invoice.png", // If imported: image: invoiceImage,
   },
   {
     title: "NephlySoul",
     description:
       "Social companionship platform with posts, messaging, and user interaction features.",
     link: "https://nephly-soul.vercel.app/",
-    image: "/assets/nephly.png",
+    image: "/assets/nephly.png", // If imported: image: nephlyImage,
   },
   {
-    title: "44Saturn Clothing",
+    title: "Scentique",
     description:
-      "E-commerce platform with product listing and checkout experience.",
-    link: "https://app.44saturnclothing.com/",
-    image: "/assets/cloth.png",
+      "A multi-brand luxury perfume marketplace with immersive brand experiences",
+    link: "https://scentique-theta.vercel.app/",
+    image: "/assets/perf.jpeg", // If imported: image: scentiqueImage,
   },
+  {
+    title: "LcuShuttle",
+    description:
+      "A transportation management platform for efficient shuttle services.",
+    link: "https://lcushuttle.vercel.app/",
+    image: "/assets/shuttle.png", // If imported: image: shuttleImage,
+  },
+  {
+    title: "SpaceHub",
+    description:
+      "A space exploration news and community platform with latest updates, articles, and discussions on space-related topics.",
+    link: "https://spacehub-eta.vercel.app/",
+    image: "/assets/spacehub.png",
+  }, // Add a comma here if you plan to add more projects later
 ];
 
 const sectionAnim = {
@@ -84,7 +112,7 @@ const Homepage = () => {
         <motion.img
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
-          src="/assets/Gbemlight.png" 
+          src="/assets/Gbemlight.png"
           alt="Oluwadamilare Adeyanju"
           className="w-48 h-48 md:w-60 md:h-60 rounded-full border-4 border-amber-400 object-cover mb-8 shadow-2xl shadow-amber-400/40 ring-8 ring-amber-400/10 transition-shadow"
         />
